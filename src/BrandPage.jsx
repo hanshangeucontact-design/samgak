@@ -45,7 +45,7 @@ const BrandPage = () => {
       {/* [2] 철학 섹션 */}
       <section className="philosophy-section">
         <div className="section-title-area" ref={addToRefs}>
-          <h2>동구밭의 브랜드ㅁ 철학</h2>
+          <h2>동구밭의 브랜드 철학</h2>
           <div className="title-underline"></div>
         </div>
         {/* Row 01 */}
