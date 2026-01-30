@@ -35,8 +35,7 @@ const BrandPage = () => {
       {/* [1] 메인 배너 */}
       <div className="hero-banner">
         <video autoPlay muted loop playsInline>
-          <source src="/img/videoplayBack.mp4" type="video/mp4" />
-          .
+          <source src="/img/videoplayBack.mp4" type="video/mp4" />.
         </video>
         {/* <div className="overlay-text">
           <h1>지구를 구하는 단단한 고집</h1>
