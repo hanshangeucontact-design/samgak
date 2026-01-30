@@ -1,0 +1,208 @@
+/* src/ZeroWaste.css */
+
+/* 공통 변수 (필요 시 유지) */
+:root {
+  --dong-green: #2d5a27; /* 예시 색상 코드 */
+}
+
+.zerowaste-page-wrapper {
+  width: 100%;
+  background-color: #fff;
+  overflow-x: hidden; /* 모바일 좌우 삐져나감 방지 */
+}
+
+.zw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px; /* 좌우 패딩 추가로 모바일 여백 확보 */
+}
+
+/* 히어로 배너: 높이 유연성 부여 */
+.zw-hero-banner {
+  min-height: 283px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url('/public/img/banner_3.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.zw-section {
+  margin-bottom: 100px;
+}
+
+.zw-section h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--dong-green);
+  margin-bottom: 20px;
+}
+
+/* 섹션 헤더: width를 100%로 변경하여 유연하게 대응 */
+.zw-section-header {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 45px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  border-bottom: 1px solid #e0e0d0;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* 슬로건 배너: 고정 width 제거 */
+.zw-badge-banner {
+  background-color: #ecf2ec;
+  width: 100%;
+  max-width: 996px;
+  min-height: 60px;
+  margin: 0 auto 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+
+.zw-badge-banner p {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* 통계 행: 모바일에서 세로 정렬로 변경될 수 있도록 flex-wrap 추가 */
+.zw-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* 간격 소폭 조정 */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.zw-flex-item {
+  flex: 1;
+  min-width: 280px; /* 모바일에서 좁아지면 아래로 떨어짐 */
+  text-align: center;
+}
+
+.zw-image-container {
+  height: auto;
+  max-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.zw-stat-img {
+  width: 100%;
+  max-width: 383px; /* 가이드 비율 유지 */
+  height: auto;
+  object-fit: contain;
+}
+
+.zw-stat-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.zw-stat-desc {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* 요약 카드: 고정 높이 제거 및 반응형 패딩 */
+.zw-summary-card {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 262px;
+  background-color: #82be90;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.zw-summary-count {
+  font-size: clamp(2.5rem, 8vw, 3.5rem); /* 화면 크기에 따라 폰트 조절 */
+  font-weight: 700;
+  color: #2d5a27;
+  margin: 10px 0;
+}
+
+.zw-summary-text {
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.text-point {
+  color: #a64d3b;
+}
+.text-green {
+  color: #2d5a27;
+}
+
+/* 애니메이션 효과 */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  font-weight: 500;
+}
+
+.reveal-item.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- 모바일 반응형 미디어 쿼리 추가 --- */
+@media (max-width: 768px) {
+  .zw-container {
+    padding: 40px 15px;
+  }
+
+  .zw-section {
+    margin-bottom: 60px;
+  }
+
+  .zw-section h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .zw-section-header {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .zw-badge-banner p {
+    font-size: 0.95rem;
+  }
+
+  .zw-summary-card {
+    border-radius: 20px;
+  }
+
+  .zw-summary-count {
+    margin: 5px 0;
+  }
+}
